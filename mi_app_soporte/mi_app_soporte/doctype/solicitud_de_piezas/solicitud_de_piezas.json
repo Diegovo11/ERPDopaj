@@ -1,0 +1,152 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2026-06-15 16:29:42.748927",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "numero_serie",
+  "equipo",
+  "marca",
+  "modelo",
+  "cliente",
+  "ubicacion",
+  "fecha_solicitud",
+  "tecnico",
+  "estado",
+  "contador_actual",
+  "evidencia_contador",
+  "observaciones",
+  "piezas_solicitadas",
+  "comentario_revisor",
+  "fecha_revision"
+ ],
+ "fields": [
+  {
+   "fieldname": "equipo",
+   "fieldtype": "Link",
+   "label": "Equipo (Device ID)",
+   "options": "Equipo",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "equipo.cliente",
+   "fieldname": "cliente",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Cliente",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "equipo.unidad_organizativa",
+   "fieldname": "ubicacion",
+   "fieldtype": "Data",
+   "label": "Ubicaci\u00f3n",
+   "read_only": 1
+  },
+  {
+   "default": "Today",
+   "fieldname": "fecha_solicitud",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Fecha Solicitud",
+   "reqd": 1
+  },
+  {
+   "fieldname": "tecnico",
+   "fieldtype": "Data",
+   "label": "T\u00e9cnico",
+   "reqd": 1
+  },
+  {
+   "default": "Pendiente",
+   "fieldname": "estado",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Estado",
+   "options": "Pendiente\nAprobada\nRechazada",
+   "reqd": 1
+  },
+  {
+   "fieldname": "contador_actual",
+   "fieldtype": "Int",
+   "label": "Contador Actual"
+  },
+  {
+   "fieldname": "evidencia_contador",
+   "fieldtype": "Attach",
+   "label": "Evidencia Contador"
+  },
+  {
+   "fieldname": "observaciones",
+   "fieldtype": "Text",
+   "label": "Observaciones"
+  },
+  {
+   "fieldname": "piezas_solicitadas",
+   "fieldtype": "Table",
+   "label": "Piezas Solicitadas",
+   "options": "Detalle Pieza Solicitada"
+  },
+  {
+   "fieldname": "comentario_revisor",
+   "fieldtype": "Text",
+   "label": "Comentario Revisor"
+  },
+  {
+   "fieldname": "fecha_revision",
+   "fieldtype": "Date",
+   "label": "Fecha Revisi\u00f3n"
+  },
+  {
+   "fieldname": "numero_serie",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "N\u00famero de Serie",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "equipo.marca",
+   "fieldname": "marca",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Marca",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "equipo.modelo",
+   "fieldname": "modelo",
+   "fieldtype": "Data",
+   "label": "Modelo",
+   "read_only": 1
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2026-06-15 16:39:40.889121",
+ "modified_by": "Administrator",
+ "module": "Mi app soporte",
+ "name": "Solicitud de Piezas",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

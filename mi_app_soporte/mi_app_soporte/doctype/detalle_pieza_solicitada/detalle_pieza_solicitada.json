@@ -1,0 +1,59 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2026-06-15 16:30:23.187020",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "pieza",
+  "cantidad",
+  "vida_util_paginas",
+  "justificacion"
+ ],
+ "fields": [
+  {
+   "fieldname": "pieza",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Pieza",
+   "options": "Pieza",
+   "reqd": 1
+  },
+  {
+   "fieldname": "cantidad",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Cantidad",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "pieza.vida_util_paginas",
+   "fieldname": "vida_util_paginas",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Vida \u00datil (P\u00e1ginas)",
+   "read_only": 1
+  },
+  {
+   "fieldname": "justificacion",
+   "fieldtype": "Text",
+   "label": "Justificaci\u00f3n"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2026-06-15 16:31:20.036353",
+ "modified_by": "Administrator",
+ "module": "Mi app soporte",
+ "name": "Detalle Pieza Solicitada",
+ "owner": "Administrator",
+ "permissions": [],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
