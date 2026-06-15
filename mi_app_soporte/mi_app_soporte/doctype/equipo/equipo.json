@@ -1,0 +1,167 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "field:device_id",
+ "creation": "2026-06-15 11:29:25.211004",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "device_id",
+  "status",
+  "marca",
+  "modelo",
+  "numero_serie",
+  "model_type",
+  "inventario",
+  "folio_sharp",
+  "cliente",
+  "contrato",
+  "unidad_organizativa",
+  "direccion",
+  "ciudad",
+  "estado",
+  "ip_address",
+  "fecha_instalacion",
+  "responsable_nombre",
+  "responsable_correo",
+  "responsable_telefono",
+  "area",
+  "piso"
+ ],
+ "fields": [
+  {
+   "fieldname": "device_id",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Device ID",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Status",
+   "options": "Producci\u00f3n\nArchivado\nEn espera\nEn lista negra\nEn reparaci\u00f3n\nFuera de servicio\nImplementaci\u00f3n en curso\nNo inscrito\nPerdido\nPlanificado\nRetirado\nRobado",
+   "reqd": 1
+  },
+  {
+   "fieldname": "marca",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Marca",
+   "options": "BROTHER\nCANON\nEPSON\nFELLOWES\nHP\nKODAK\nKONICA\nKYOCERA\nLEXMARK\nSAMSUNG\nSHARP\nTALLY DASCOM\nXEROX\nZEBRA",
+   "reqd": 1
+  },
+  {
+   "fieldname": "modelo",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Modelo",
+   "reqd": 1
+  },
+  {
+   "fieldname": "numero_serie",
+   "fieldtype": "Data",
+   "label": "N\u00famero de Serie",
+   "reqd": 1
+  },
+  {
+   "fieldname": "model_type",
+   "fieldtype": "Data",
+   "label": "Model Type"
+  },
+  {
+   "fieldname": "inventario",
+   "fieldtype": "Data",
+   "label": "Inventario"
+  },
+  {
+   "fieldname": "folio_sharp",
+   "fieldtype": "Data",
+   "label": "Folio Sharp"
+  },
+  {
+   "fieldname": "cliente",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Cliente"
+  },
+  {
+   "fieldname": "contrato",
+   "fieldtype": "Data",
+   "label": "Contrato"
+  },
+  {
+   "fieldname": "unidad_organizativa",
+   "fieldtype": "Data",
+   "label": "Unidad Organizativa"
+  },
+  {
+   "fieldname": "direccion",
+   "fieldtype": "Small Text",
+   "label": "Direcci\u00f3n"
+  },
+  {
+   "fieldname": "ciudad",
+   "fieldtype": "Data",
+   "label": "Ciudad"
+  },
+  {
+   "fieldname": "estado",
+   "fieldtype": "Data",
+   "label": "Estado"
+  },
+  {
+   "fieldname": "ip_address",
+   "fieldtype": "Data",
+   "label": "IP Address"
+  },
+  {
+   "fieldname": "fecha_instalacion",
+   "fieldtype": "Date",
+   "label": "Fecha Instalaci\u00f3n"
+  },
+  {
+   "fieldname": "responsable_nombre",
+   "fieldtype": "Data",
+   "label": "Responsable Nombre"
+  },
+  {
+   "fieldname": "responsable_correo",
+   "fieldtype": "Data",
+   "label": "Responsable Correo"
+  },
+  {
+   "fieldname": "responsable_telefono",
+   "fieldtype": "Data",
+   "label": "Responsable Tel\u00e9fono"
+  },
+  {
+   "fieldname": "area",
+   "fieldtype": "Data",
+   "label": "\u00c1rea"
+  },
+  {
+   "fieldname": "piso",
+   "fieldtype": "Data",
+   "label": "Piso"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2026-06-15 13:06:21.048442",
+ "modified_by": "Administrator",
+ "module": "Mi app soporte",
+ "name": "Equipo",
+ "owner": "Administrator",
+ "permissions": [],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "device_id"
+}
