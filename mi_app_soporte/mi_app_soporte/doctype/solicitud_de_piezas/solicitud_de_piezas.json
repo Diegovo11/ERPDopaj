@@ -12,15 +12,15 @@
   "modelo",
   "cliente",
   "ubicacion",
-  "fecha_solicitud",
   "tecnico",
   "estado",
   "contador_actual",
   "evidencia_contador",
   "observaciones",
   "piezas_solicitadas",
+  "fecha_hora_solicitud",
   "comentario_revisor",
-  "fecha_revision"
+  "fecha_hora_revision"
  ],
  "fields": [
   {
@@ -46,14 +46,6 @@
    "read_only": 1
   },
   {
-   "default": "Today",
-   "fieldname": "fecha_solicitud",
-   "fieldtype": "Date",
-   "in_list_view": 1,
-   "label": "Fecha Solicitud",
-   "reqd": 1
-  },
-  {
    "fieldname": "tecnico",
    "fieldtype": "Data",
    "label": "T\u00e9cnico",
@@ -66,7 +58,7 @@
    "in_list_view": 1,
    "label": "Estado",
    "options": "Pendiente\nAprobada\nRechazada",
-   "reqd": 1
+   "permlevel": 1
   },
   {
    "fieldname": "contador_actual",
@@ -92,12 +84,8 @@
   {
    "fieldname": "comentario_revisor",
    "fieldtype": "Text",
-   "label": "Comentario Revisor"
-  },
-  {
-   "fieldname": "fecha_revision",
-   "fieldtype": "Date",
-   "label": "Fecha Revisi\u00f3n"
+   "label": "Comentario Revisor",
+   "permlevel": 1
   },
   {
    "fieldname": "numero_serie",
@@ -120,12 +108,26 @@
    "fieldtype": "Data",
    "label": "Modelo",
    "read_only": 1
+  },
+  {
+   "fieldname": "fecha_hora_solicitud",
+   "fieldtype": "Datetime",
+   "in_list_view": 1,
+   "label": "Fecha y Hora de Solicitud",
+   "read_only": 1
+  },
+  {
+   "fieldname": "fecha_hora_revision",
+   "fieldtype": "Datetime",
+   "label": "Fecha y Hora de Revisi\u00f3n",
+   "permlevel": 1,
+   "read_only": 1
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2026-06-15 16:39:40.889121",
+ "modified": "2026-06-23 15:56:21.695882",
  "modified_by": "Administrator",
  "module": "Mi app soporte",
  "name": "Solicitud de Piezas",
@@ -136,6 +138,50 @@
    "delete": 1,
    "email": 1,
    "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "if_owner": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Tecnico",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "permlevel": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Revisor",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Revisor",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "permlevel": 1,
    "print": 1,
    "read": 1,
    "report": 1,
